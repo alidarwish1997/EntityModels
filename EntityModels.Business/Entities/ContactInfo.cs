@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace EntityModels
+namespace EntityModels.Core.Entities
 {
     public class ContactInfo
     {

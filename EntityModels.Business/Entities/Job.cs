@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace EntityModels
+namespace EntityModels.Core.Entities
 {
     public class Job
     {

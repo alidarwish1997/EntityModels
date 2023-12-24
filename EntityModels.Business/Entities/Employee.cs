@@ -1,6 +1,6 @@
 ﻿using EntityModels;
 
-namespace EntityModels
+namespace EntityModels.Core.Entities
 {
     public class Employee : Person
     {
@@ -17,12 +17,6 @@ namespace EntityModels
         public int? ManagerId { get; set; }
     }
 }
-    public class Position
-    {
-        public int PositionId { get; set; }
-        public string? PositionName { get; set; }
-        public ICollection<Employee>? Employees { get; set; }
-    }
 
 
 

@@ -1,4 +1,4 @@
-﻿namespace EntityModels
+﻿namespace EntityModels.Core.Entities
 {
     public class Address
     {
