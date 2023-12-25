@@ -1,8 +1,9 @@
-﻿namespace EntityModels.Core.Entities
+﻿using EntityModels.Core.Entities.Base;
+
+namespace EntityModels.Core.Entities
 {
-    public class Order
+    public class Order : Entity
     {
-        public int? Id { get; set; }
         public Product? Product { get; set; }
         public Customer? Customer { get; set; }
         public bool? IsDelivered { get; set; }

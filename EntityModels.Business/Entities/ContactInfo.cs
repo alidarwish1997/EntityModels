@@ -1,10 +1,10 @@
-﻿using System.Net;
+﻿using EntityModels.Core.Entities.Base;
+using System.Net;
 
 namespace EntityModels.Core.Entities
 {
-    public class ContactInfo
+    public class ContactInfo : Entity
     {
-        public int Id { get; set; }
         public Address? Address { get; set; }
         public string? PersonalEmail { get; set; }
         public string? WorkEmail { get; set; }

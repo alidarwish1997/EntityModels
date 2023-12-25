@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityModels.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace EntityModels
+namespace EntityModels.Infrastructure.Data
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {

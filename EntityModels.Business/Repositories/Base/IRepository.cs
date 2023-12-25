@@ -1,10 +1,6 @@
 ﻿using EntityModels.Core.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using EntityModels.Core.Specifications.Base;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityModels.Core.Repositories.Base
 {

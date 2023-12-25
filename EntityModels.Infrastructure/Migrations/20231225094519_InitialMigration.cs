@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace EntityModels.Migrations
+namespace EntityModels.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,8 +22,7 @@ namespace EntityModels.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BuildingNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DirectionNotes = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AddTestAgain = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DirectionNotes = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,13 +47,14 @@ namespace EntityModels.Migrations
                 name: "Positions",
                 columns: table => new
                 {
-                    PositionId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    PositionId = table.Column<int>(type: "int", nullable: false),
                     PositionName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Positions", x => x.PositionId);
+                    table.PrimaryKey("PK_Positions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -133,7 +133,7 @@ namespace EntityModels.Migrations
                         name: "FK_Persons_Positions_PositionId",
                         column: x => x.PositionId,
                         principalTable: "Positions",
-                        principalColumn: "PositionId");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

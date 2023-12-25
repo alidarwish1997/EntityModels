@@ -1,8 +1,9 @@
-﻿namespace EntityModels.Core.Entities
+﻿using EntityModels.Core.Entities.Base;
+
+namespace EntityModels.Core.Entities
 {
-    public class Person
+    public class Person  : Entity
     {
-        public int Id { get; set; } 
         public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
         public string? LastName { get; set; }
